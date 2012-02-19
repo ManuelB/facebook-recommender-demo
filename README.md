@@ -19,4 +19,4 @@ You will need the following requirements to get application working:
 * git
 * Java 6
 * Maven 3
-* Java EE 6 compatible Container e.g. 
+* Java EE 6 compatible Container e.g. Glassfish 3 (http://glassfish.java.net/)
