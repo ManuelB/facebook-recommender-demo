@@ -10,13 +10,19 @@ archive will be generated.
 Here is how you get this working
 --------------------------------
 
+`The embedded glassfish jar will be about 67mb. So be a little bit patient until it is loading.`
+
     git clone git@github.com:ManuelB/facebook-recommender-demo.git
     cd facebook-recommender-demo
     mvn install
+    mvn embedded-glassfish:run 
+
+Open the following URL in your browser:
+http://localhost:8080/myapp/FacebookRecommender/person/Manuel%20Blechschmidt
 
 You will need the following requirements to get application working:
 
 * git
 * Java 6
 * Maven 3
-* Java EE 6 compatible Container e.g. Glassfish 3 (http://glassfish.java.net/)
+* Java EE 6 compatible Container e.g. Glassfish 3 (http://glassfish.java.net/, Glassfish is bundled)
