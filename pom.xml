@@ -30,4 +30,9 @@
 		<url>http://www.apaxo.de</url>
 	</organization>
 	<url>http://www.manuel-blechschmidt.de</url>
+	<scm>
+		<url>scm:git:git@git@github.com/ManuelB/facebook-recommender-demo</url>
+		<connection>scm:git:git@@github.com/ManuelB/facebook-recommender-demo</connection>
+		<developerConnection>scm:git:git@@github.com/ManuelB/facebook-recommender-demo</developerConnection>
+	</scm>
 </project>
