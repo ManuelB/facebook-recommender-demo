@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.apaxo.bedcon</groupId>
+	<artifactId>facebook-recommender-demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>BedCon Demo for a Facebook Recommender</name>
+	<description>This projects shows how you create a war with a recommender in it based on a dataset by Facebook likes.</description>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.mahout</groupId>
+			<artifactId>mahout-core</artifactId>
+			<version>0.6</version>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-commons-csv</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+	</dependencies>
+	<organization>
+		<name>Apaxo GmbH</name>
+		<url>http://www.apaxo.de</url>
+	</organization>
+	<url>http://www.manuel-blechschmidt.de</url>
+</project>
