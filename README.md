@@ -20,9 +20,9 @@ Here is how you get this working
 Open the following URL in your browser:
 http://localhost:8080/myapp/FacebookRecommender/person/Manuel%20Blechschmidt
 
-You will need the following requirements to get application working:
+You will need the following requirements to get the application working:
 
-* git
-* Java 6
-* Maven 3
+* git (http://git-scm.com/download)
+* Java 6 JDK (http://www.java.com/en/download/index.jsp)
+* Maven 3 (http://maven.apache.org/)
 * Java EE 6 compatible Container e.g. Glassfish 3 (http://glassfish.java.net/, Glassfish is bundled)
