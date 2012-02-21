@@ -12,7 +12,7 @@ Here is how you get this working
 
 `The embedded glassfish jar will be about 67mb. So be a little bit patient until it is loaded.`
 
-    git clone git@github.com:ManuelB/facebook-recommender-demo.git
+    git clone git://github.com/ManuelB/facebook-recommender-demo.git
     cd facebook-recommender-demo
     mvn install
     mvn embedded-glassfish:run 
