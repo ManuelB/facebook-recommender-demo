@@ -52,7 +52,7 @@
           <configuration>
             <goalPrefix>glassfish</goalPrefix>
             <app>target/${project.artifactId}.${project.packaging}</app>
-            <port>8080</port>
+            <port>8010</port>
           </configuration>
         </plugin>
       </plugins>
