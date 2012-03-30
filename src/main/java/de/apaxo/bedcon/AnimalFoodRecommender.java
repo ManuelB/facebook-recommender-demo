@@ -120,8 +120,27 @@ public class AnimalFoodRecommender {
 	
 	public void initRecommender() {
 		try {
-			GenericUserBasedRecommender recommender = new GenericUserBasedRecommender(model, new NearestNUserNeighborhood(3, new PearsonCorrelationSimilarity(model), model), new PearsonCorrelationSimilarity(model));
+			
+			PearsonCorrelationSimilarity pearsonSimilarity = new PearsonCorrelationSimilarity(model);
+			
+			// Java: Similarity between Wolf and Bear: 0.8196561646738477
+			// R: corr(c(8,3,1),c(8,7,2)): 0.8196562
+			System.out.println("Similarity between Wolf and Bear: "+pearsonSimilarity.userSimilarity(id2thing.toLongID("Wolf"), id2thing.toLongID("Bear")));
+			// Similarity between Wolf and Rabbit: -0.6465846072812313
+			// R: cor(c(8,3,1),c(2,1,10)): -0.6465846
+			System.out.println("Similarity between Wolf and Rabbit: "+pearsonSimilarity.userSimilarity(id2thing.toLongID("Wolf"), id2thing.toLongID("Rabbit")));
+			// Similarity between Wolf and Pinguin: -0.24019223070763077
+			// R: cor(c(8,3,1),c(2,10,2)): -0.2401922
+			System.out.println("Similarity between Wolf and Pinguin: "+pearsonSimilarity.userSimilarity(id2thing.toLongID("Wolf"), id2thing.toLongID("Pinguin")));
+			
+			GenericUserBasedRecommender recommender = new GenericUserBasedRecommender(model, new NearestNUserNeighborhood(3, pearsonSimilarity, model), pearsonSimilarity);
 			for(RecommendedItem r : recommender.recommend(id2thing.toLongID("Wolf"), 3)) {
+				// Pork:
+				// (0.8196561646738477 * 8 + (-0.6465846072812313) * 1) / (0.8196561646738477 + (-0.6465846072812313)) = 34,15157 ~ 10
+				// Grass:
+				// (2*(-0.24019223070763077)+7*(-0.6465846072812313)) / ((-0.24019223070763077) + (-0.6465846072812313)) = 5,65
+				// Corn:
+				// (2*(-0.24019223070763077)+2*(0.8196561646738477)) / (-0.24019223070763077+0.8196561646738477) = 2
 				System.out.println("UserBased: Wolf should eat: "+id2thing.toStringID(r.getItemID())+" Rating: "+r.getValue());
 			}
 			SVDRecommender svdrecommender = new SVDRecommender(model, new ExpectationMaximizationSVDFactorizer(model, 4, 1000));

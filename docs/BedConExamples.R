@@ -10,7 +10,7 @@ Bear     <- c( 2, NA,  8,  8,  2,  7)
 Lion     <- c(NA, NA,  9, 10,  2, NA)
 Tiger    <- c(NA, NA,  8, NA, NA,  5)
 Antilope <- c( 6, 10,  1,  1, NA, NA)
-Wolf     <- c( 1, NA, NA,  8, NA,  4)
+Wolf     <- c( 1, NA, NA,  8, NA,  3)
 Sheep    <- c(NA,  8, NA, NA, NA,  2)
 # all the animals
 animals <- c("Rabbit","Cow","Dog","Pig","Chicken","Pinguin","Bear","Lion","Tiger","Antilope","Wolf","Sheep")
