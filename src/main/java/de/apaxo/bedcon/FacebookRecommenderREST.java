@@ -53,7 +53,21 @@ import javax.ws.rs.Produces;
 import org.apache.mahout.cf.taste.common.TasteException;
 
 /**
- * This class implements a REST interface to the recommender.
+ * This class implements a REST interface for the recommender
+ * bean.
+ * It uses the JAX-RS API which is part of the Java EE 6 standard which can
+ * be found here: http://java.sun.com/javaee/technologies/index.jsp
+ * 
+ * JAX-RS itself is specified in JSR-311:
+ * https://jsr311.dev.java.net/
+ * 
+ * You can read a tutorial about REST in the Java EE 6 Tutorial in Chapter 13.
+ * 
+ * Jersey provides the reference implementation of JAX-RS:
+ * https://jersey.dev.java.net/.
+ * 
+ * This bean was only tested with jersey gut should work with other
+ * implementations as well.
  * 
  * URL:
  * http://localhost:8080/facebook-recommender-demo/FacebookRecommender/person/Manuel%20Blechschmidt
@@ -70,14 +84,36 @@ public class FacebookRecommenderREST {
 	 */
 	private Logger log = Logger.getLogger(FacebookRecommenderREST.class.getName());
 	
+	/**
+	 * Inject the recommender bean by using the a no-interface
+	 * view. javaeetutorial6.pdf Page: 268:
+	 * Accessing Local Enterprise Beans Using the No-Interface View
+	 */
 	@EJB
 	private FacebookRecommender facebookRecommender;
 	
 	/**
 	 * A REST interface for accessing the recommender.
-	 * It just returns the array which was glued together.
-	 * @param personName
-	 * @return
+	 * It just returns the array which was joined together with newlines
+	 * as glue.
+	 * 
+	 * The @Produces annotation could be changed for more sophisticated
+	 * mime types like application/json or application/xml. This could
+	 * require new serializers. JAXB bindings are required for application/xml.
+	 * 
+	 * For information on which types are supported by JAXB, see JAXB default
+	 * data type bindings in the Java EE 5 tutorial.
+	 * 
+	 * For application/json JSONB which is build on top of JAXB is
+	 * available.
+	 * 
+	 * Please read javaeetutorial6.pdf Page: 246
+	 * Using @Consumes and @Produces to Customize Requests and Responses
+	 * 
+	 * @see https://jsr311.dev.java.net/nonav/releases/1.0/javax/ws/rs/core/MediaType.html
+	 * 
+	 * @param personName the name of the person for the recommendations
+	 * @return a string where every line contains a recommendation
 	 * @throws TasteException
 	 */
 	@GET

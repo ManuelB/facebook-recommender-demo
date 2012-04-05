@@ -52,10 +52,17 @@ import org.apache.mahout.cf.taste.common.TasteException;
 
 /**
  * This class implements a SOAP interface for the
- * recommender.
+ * recommender using JAX-WS. It is tested
+ * with the reference implementation Metro by the Oracle
+ * Corporation former Sun Microsystems.
+ * 
+ * For more information read:
+ * The Java EE 6 Tutorial - Chapter 12 - Building Web Services with JAX-WS
  * 
  * URL:
  * http://localhost:8080/FacebookRecommenderSOAPService/FacebookRecommenderSOAP?Tester
+ * WSDL:
+ * http://localhost:8080/FacebookRecommenderSOAPService/FacebookRecommenderSOAP?wsdl
  * 
  * @author Manuel Blechschmidt <blechschmidt@apaxo.de>
  *
@@ -71,13 +78,18 @@ public class FacebookRecommenderSOAP {
 	private Logger log = Logger.getLogger(FacebookRecommenderSOAP.class.getName());
 	
 	/**
-	 * The injected facebookRecommender
+	 * Inject the recommender bean by using the a no-interface
+	 * view. javaeetutorial6.pdf Page: 268:
+	 * Accessing Local Enterprise Beans Using the No-Interface View
 	 */
 	@EJB
 	private FacebookRecommender facebookRecommender;
 
 	/**
-	 * SOAP interface for recommendation implementation.
+	 * SOAP interface for recommendation implementation. The string array
+	 * will be serialized in the SOAP message according to the JAXB default type mapping.
+	 * More information can be read in JAXB default data type bindings in the Java EE 5 tutorial.
+	 * 
 	 * @param personName the person for which recommendations are required
 	 * @return an array of strings with recommendations
 	 * @throws TasteException if something goes wrong a TasteException is thrown

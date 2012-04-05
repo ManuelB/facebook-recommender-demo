@@ -216,8 +216,11 @@ public class FacebookRecommender {
 	}
 	
 	/**
-	 * Returns the recommendations for a certain person
-	 * as a string array.
+	 * Returns up to 10 recommendations for a certain person
+	 * as a string array. If less then 10 things are found
+	 * the array will contain less elements.
+	 * If no recommendations are found the array will contain 0
+	 * elements.
 	 * @param personName The Facebook name of the person
 	 * @return a string array with recommendations
 	 * @throws TasteException If anything goes wrong a TasteException is thrown
@@ -233,6 +236,6 @@ public class FacebookRecommender {
 			log.log(Level.SEVERE, "Error during retrieving recommendations", e);
 			throw e;
 		}
-		return recommendations.toArray(new String[10]);
+		return recommendations.toArray(new String[recommendations.size()]);
 	}
 }
