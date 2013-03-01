@@ -22,14 +22,18 @@ public class FacebookRecommenerTest {
 		recommender.initRecommender();
 		try {
 			String[] recs = recommender.recommendThings("Manuel Blechschmidt");
-			assertArrayEquals(recs, new String[] {
+            // Some debugging output
+            // for(String rec : recs) {
+            //    System.out.println(rec);
+            //}
+	        assertArrayEquals(recs, new String[] {
 					"ELVIS PRESLEY",
 					"Guns N' Roses",
-					"Foo Fighters",
 					"Dance on the Tightrope",
 					"The Beatles",
 					"Lauryn Hill",
-					"Queens of the Stone Age",
+                    "Beastie Boys",
+					"Nikka Costa",
 					"Dave Matthews Band",
 					"Danko Jones",
 					"Rollins, Sonny"	

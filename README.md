@@ -18,7 +18,7 @@ Here is how you get this working
     mvn embedded-glassfish:run 
 
 Open the following URL in your browser:
-http://localhost:8010/myapp/FacebookRecommender/person/Manuel%20Blechschmidt
+http://localhost:8010/facebook-recommender-demo/FacebookRecommender/person/Manuel%20Blechschmidt
 
 You will need the following requirements to get the application working:
 
