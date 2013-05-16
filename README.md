@@ -1,6 +1,8 @@
 Facebook Demo Recommender based on Java EE 6 and Mahout
 =============
 
+Copyright: Apaxo GmbH http://www.apaxo.de
+
 This project is a demo of how you can use mahout to build a cool
 musician recommender for your friends.
 It includse everything what you need including a modern REST
@@ -26,3 +28,14 @@ You will need the following requirements to get the application working:
 * Java 6 JDK (http://www.java.com/en/download/index.jsp)
 * Maven 3 (http://maven.apache.org/)
 * Java EE 6 compatible Container e.g. Glassfish 3 (http://glassfish.java.net/, Glassfish is bundled)
+
+
+If you need support
+--------------------------------
+
+Feel free to contact us: http://www.apaxo.de/us/contact.html
+
+Checkout our othering offerings:
+
+ * Personalized newsletters: http://www.apaxo.de/us/recnews.html
+ * Subscription ecommerce: http://www.apaxo.de/us/subscription-products.html
