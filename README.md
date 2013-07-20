@@ -35,7 +35,7 @@ If you need support
 
 Feel free to contact us: http://www.apaxo.de/us/contact.html
 
-Checkout our othering offerings:
+Checkout our other offerings:
 
  * Personalized newsletters: http://www.apaxo.de/us/recnews.html
  * Subscription ecommerce: http://www.apaxo.de/us/subscription-products.html
