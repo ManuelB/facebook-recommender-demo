@@ -11,7 +11,7 @@ import org.apache.mahout.cf.taste.impl.model.GenericUserPreferenceArray;
 import org.apache.mahout.cf.taste.impl.model.MemoryIDMigrator;
 import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood;
 import org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommender;
-import org.apache.mahout.cf.taste.impl.recommender.svd.ExpectationMaximizationSVDFactorizer;
+import org.apache.mahout.cf.taste.impl.recommender.svd.SVDPlusPlusFactorizer;
 import org.apache.mahout.cf.taste.impl.recommender.svd.SVDRecommender;
 import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity;
 import org.apache.mahout.cf.taste.model.DataModel;
@@ -143,7 +143,7 @@ public class AnimalFoodRecommender {
 				// (2*(-0.24019223070763077)+2*(0.8196561646738477)) / (-0.24019223070763077+0.8196561646738477) = 2
 				System.out.println("UserBased: Wolf should eat: "+id2thing.toStringID(r.getItemID())+" Rating: "+r.getValue());
 			}
-			SVDRecommender svdrecommender = new SVDRecommender(model, new ExpectationMaximizationSVDFactorizer(model, 4, 1000));
+			SVDRecommender svdrecommender = new SVDRecommender(model, new SVDPlusPlusFactorizer(model, 4, 1000));
 			for(RecommendedItem r : svdrecommender.recommend(id2thing.toLongID("Sheep"), 3)) {
 				System.out.println("SVD: Sheep should eat: "+id2thing.toStringID(r.getItemID())+" Rating: "+r.getValue());
 			}
