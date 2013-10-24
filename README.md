@@ -9,6 +9,10 @@ It includse everything what you need including a modern REST
 and a conservative SOAP interface. In the end a web application
 archive will be generated.
 
+The presentation can be found here:
+
+http://de.slideshare.net/ManuelB86/how-to-build-a-recommender-system-based-on-mahout-and-java-ee
+
 Here is how you get this working
 --------------------------------
 
