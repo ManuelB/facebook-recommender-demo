@@ -34,9 +34,9 @@ You will need the following requirements to get the application working:
 If you need support
 --------------------------------
 
-Feel free to contact us: http://www.apaxo.de/us/contact.html
+Feel free to contact us: http://www.apaxo.de/en/contact.html
 
 Checkout our other offerings:
 
- * Personalized newsletters: http://www.apaxo.de/us/recnews.html
- * Subscription ecommerce: http://www.apaxo.de/us/subscription-products.html
+ * Personalized newsletters: http://www.apaxo.de/en/products/newsletter.html
+ * Budget optimizer: http://www.apaxo.de/en/products/budgetoptimizer.html
