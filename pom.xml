@@ -12,6 +12,12 @@
       <groupId>org.apache.mahout</groupId>
       <artifactId>mahout-core</artifactId>
       <version>0.8</version>
+      <exclusions>
+        <exclusion>
+           <groupId>org.apache.hadoop</groupId>
+           <artifactId>hadoop-core</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>javax</groupId>
