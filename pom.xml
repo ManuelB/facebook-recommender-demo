@@ -7,6 +7,11 @@
   <packaging>war</packaging>
   <name>BedCon Demo for a Facebook Recommender</name>
   <description>This projects shows how you create a war with a recommender in it based on a dataset by Facebook likes.</description>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>org.apache.mahout</groupId>
