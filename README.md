@@ -16,7 +16,7 @@ http://de.slideshare.net/ManuelB86/how-to-build-a-recommender-system-based-on-ma
 Here is how you get this working
 --------------------------------
 
-`The embedded glassfish jar will be about 67mb. So be a little bit patient until it is loaded.`
+`The embedded glassfish jar will be about 81mb. So be a little bit patient until it is loaded.`
 
     git clone git://github.com/ManuelB/facebook-recommender-demo.git
     cd facebook-recommender-demo
@@ -32,7 +32,7 @@ You will need the following requirements to get the application working:
 * git (http://git-scm.com/download)
 * Java 7 JDK (http://www.java.com/en/download/index.jsp)
 * Maven 3 (http://maven.apache.org/)
-* Java EE 6 compatible Container e.g. Glassfish 3 (http://glassfish.java.net/, Glassfish is bundled)
+* Java EE 7 compatible Container e.g. Glassfish 4 (http://glassfish.java.net/, Glassfish is bundled)
 
 
 If you need support

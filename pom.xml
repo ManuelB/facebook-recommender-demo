@@ -16,7 +16,7 @@
     <dependency>
       <groupId>org.apache.mahout</groupId>
       <artifactId>mahout-core</artifactId>
-      <version>0.8</version>
+      <version>0.9</version>
       <exclusions>
         <exclusion>
            <groupId>org.apache.hadoop</groupId>
@@ -27,7 +27,7 @@
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
-      <version>6.0</version>
+      <version>7.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -69,8 +69,22 @@
           <configuration>
             <goalPrefix>glassfish</goalPrefix>
             <app>target/${project.artifactId}.${project.packaging}</app>
+            <contextRoot>${project.artifactId}</contextRoot>
             <port>8010</port>
           </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.glassfish.main</groupId>
+              <artifactId>simple-glassfish-api</artifactId>
+              <version>4.0-b72</version>
+            </dependency>
+            <!-- Use Glassfish 4.0 https://blogs.oracle.com/brunoborges/entry/glassfish_4_beta_and_maven -->
+            <dependency>
+              <groupId>org.glassfish.main.extras</groupId>
+              <artifactId>glassfish-embedded-all</artifactId>
+              <version>4.0</version>
+            </dependency>
+          </dependencies>
         </plugin>
       </plugins>
     </pluginManagement>
