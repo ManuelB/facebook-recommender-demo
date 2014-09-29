@@ -1,4 +1,4 @@
-Facebook Demo Recommender based on Java EE 6 and Mahout
+Facebook Demo Recommender based on Java EE 7 and Mahout
 =============
 
 Copyright: Apaxo GmbH http://www.apaxo.de
