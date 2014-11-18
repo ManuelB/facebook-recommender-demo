@@ -30,9 +30,9 @@ Open the following URL in your browser:
 You will need the following requirements to get the application working:
 
 * git (http://git-scm.com/download)
-* Java 7 JDK (http://www.java.com/en/download/index.jsp)
+* Java 8 JDK (http://www.java.com/en/download/index.jsp)
 * Maven 3 (http://maven.apache.org/)
-* Java EE 7 compatible Container e.g. Glassfish 4 (http://glassfish.java.net/, Glassfish is bundled)
+* Java EE 7 compatible Container e.g. Glassfish 4.1 (http://glassfish.java.net/, Glassfish is bundled)
 
 
 If you need support
