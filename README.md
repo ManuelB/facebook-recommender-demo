@@ -1,7 +1,7 @@
 Facebook Demo Recommender based on Java EE 7 and Mahout
 =============
 
-Copyright: Apaxo GmbH http://www.apaxo.de
+Copyright: Incentergy GmbH http://www.incentergy.de
 
 This project is a demo of how you can use mahout to build a cool
 musician recommender for your friends.
@@ -38,9 +38,4 @@ You will need the following requirements to get the application working:
 If you need support
 --------------------------------
 
-Feel free to contact us: http://www.apaxo.de/en/contact.html
-
-Checkout our other offerings:
-
- * Personalized newsletters: http://www.apaxo.de/en/products/newsletter.html
- * Budget optimizer: http://www.apaxo.de/en/products/budgetoptimizer.html
+Feel free to contact us: http://www.incentergy.de/impressum/kontakt/
