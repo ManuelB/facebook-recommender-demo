@@ -93,7 +93,7 @@
     <repository>
       <id>glassfish-repository</id>
       <name>Java.net Repository for Glassfish</name>
-      <url>http://download.java.net/maven/glassfish</url>
+      <url>https://download.java.net/maven/glassfish</url>
     </repository>
   </repositories>
 </project>
