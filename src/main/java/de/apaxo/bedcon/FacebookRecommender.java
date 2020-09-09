@@ -137,7 +137,12 @@ public class FacebookRecommender {
 		try {
 			// get the file which is part of the WAR as
 			URL url = getClass().getClassLoader().getResource(DATA_FILE_NAME);
-			
+            
+            if(url == null) {
+                log.warning(DATA_FILE_NAME+" not found");
+                return;
+            }
+
 			// create a file out of the resource
 			File data = new File(url.toURI());
 			

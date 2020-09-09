@@ -65,7 +65,7 @@
         <plugin>
           <groupId>org.glassfish.embedded</groupId>
           <artifactId>maven-embedded-glassfish-plugin</artifactId>
-          <version>3.1.2.2</version>
+          <version>5.1</version>
           <configuration>
             <goalPrefix>glassfish</goalPrefix>
             <app>target/${project.artifactId}.${project.packaging}</app>
@@ -74,15 +74,15 @@
           </configuration>
           <dependencies>
             <dependency>
-              <groupId>org.glassfish.main</groupId>
+              <groupId>org.glassfish.main.common</groupId>
               <artifactId>simple-glassfish-api</artifactId>
-              <version>4.0-b72</version>
+              <version>5.1.0</version>
             </dependency>
             <!-- Use Glassfish 4.0 https://blogs.oracle.com/brunoborges/entry/glassfish_4_beta_and_maven -->
             <dependency>
               <groupId>org.glassfish.main.extras</groupId>
               <artifactId>glassfish-embedded-all</artifactId>
-              <version>4.1</version>
+              <version>5.1.0</version>
             </dependency>
           </dependencies>
         </plugin>
